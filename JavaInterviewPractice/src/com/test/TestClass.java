@@ -16,39 +16,37 @@ import java.util.Scanner;
 public  class  TestClass {
 
 
-
 	public static void main(String[] args)
 	
 	{
-		String [] arr1= {"A", "B","C","A"};
+
+		int arr[] = {21,34,22,65,43};
+		int n=2;
 		
-		String []arr2 = {"A", "A","C","B"};
+		System.out.println("Array before rotate: ");
 		
-		boolean flag=true;
-		
-		Arrays.sort(arr1);
-		Arrays.sort(arr2);
-		
-		for(int i=0;i<arr1.length;i++)
+		for(int i=0;i<arr.length;i++)
 		{
-			if(arr1[i]==arr2[i])
-			{
-				continue;
-			}
-			else
-			{
-				flag=false;
-				break;
-			}
+			System.out.print(" "+arr[i]);
 		}
 		
-		if(flag)
+		for(int i=0;i<n;i++)
 		{
-			System.out.println("Identical");
+			int first=arr[0];
+			int j;
+			for(j=0;j<arr.length-1;j++)
+			{
+				arr[j]=arr[j+1];
+			}
+			arr[j]=first;
 		}
-		else
+		
+		System.out.println("");
+		System.out.println("Array after rotate: ");
+		
+		for(int i=0;i<arr.length;i++)
 		{
-			System.out.println("not identical");
+			System.out.println(arr[i]);
 		}
 	}	
 	
