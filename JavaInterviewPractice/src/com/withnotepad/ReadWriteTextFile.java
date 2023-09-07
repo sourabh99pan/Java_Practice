@@ -16,7 +16,6 @@ public class ReadWriteTextFile {
 		
 		 BufferedReader bufferedReader = new BufferedReader(reader); 
 		 String line; 
-		 
 		 while ((line = bufferedReader.readLine()) != null) { 
 		 System.out.println(line); 
 		 } 

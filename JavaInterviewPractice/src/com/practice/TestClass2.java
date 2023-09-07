@@ -1,30 +1,29 @@
 package com.practice;
 
-import java.util.HashMap;
+import java.util.*;
+
 
 public class TestClass2 {
 
 	public static void main(String[] args) {
-
-		String [] arr = {"Selenium","python","Selenium","Java","python"};
+		int arr[] = {21,34,22,65,43};
 		
+		int pos=3;
 		
-		HashMap<String, Integer> hs =new <String, Integer>HashMap();
+		LinkedList<Integer> ll = new LinkedList<Integer>();
 		
 		for(int i=0;i<arr.length;i++)
-			
 		{
-			if(hs.containsKey(arr[i]))
-			{
-				hs.put(arr[i], hs.get(arr[i])+1);
-			}
-			else
-			{
-				hs.put(arr[i], 1);
-			}
+			ll.add(arr[i]);
 		}
 		
-		System.out.println(hs);
-	}
+		for(int i=0;i<pos;i++)
+		{
+			ll.addLast(ll.get(0));
+			ll.removeFirst();
+		}
+		
+		System.out.println(ll);
 
+	}
 }
