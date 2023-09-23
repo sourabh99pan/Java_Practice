@@ -1,9 +1,6 @@
 package com.practice;
 
-import java.util.*;
-
-
-public class TestClass2 {
+public class SubArraySumMax {
 
 	public static void main(String[] args) {
 		int arr[] = {21,34,22,65,43,22,65,25,89};
@@ -27,5 +24,7 @@ public class TestClass2 {
 		}
 		
 		System.out.println("Largest sum of subarray length 3 is: "+sumall);
+
 	}
+
 }
