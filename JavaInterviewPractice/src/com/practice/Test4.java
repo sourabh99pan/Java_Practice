@@ -1,4 +1,5 @@
 package com.practice;
+import java.util.*;
 
 public class Test4 {
 	
@@ -6,48 +7,23 @@ public class Test4 {
 
 	public static void main(String[] args) {
 		
-		String str ="mad";
+		HashMap<Integer, String> hm = new <Integer, String>HashMap();
 		
-		int num = 122;
-		int r=0;
-		int temp =num;
-		String rev = "";
+		hm.put(1, "Sourabh");
+		hm.put(2, "Sourabh");
+		hm.put(3, "Sourabh");
+		hm.put(4, "Sourabh");
 		
-		
-		for(int i=str.length()-1;i>=0;i--)
+		for(Map.Entry<Integer, String> en:hm.entrySet())
 		{
-			rev = rev+str.charAt(i);
+			System.out.println(en.getKey()+" "+en.getValue());
 		}
 		
-		if(rev.equals(str))
+		for(int i:hm.keySet())
 		{
-			System.out.println("String is palindrom");
-		}
-		else
-		{
-			System.out.println("String is not a palindrom");
+			System.out.println(hm.get(i));
 		}
 		
-		
-		while(temp>0)
-			
-		{
-			int rem= temp%10;
-			
-			 r = r*10+rem;
-			 
-			 temp =temp/10;
-			
-		}
-		
-		if(r==num)
-		{
-			System.out.println("num is palindrom");
-		}
-		else
-		{
-			System.out.println("num is not a palindrom");
-		}
 	}
 
 }

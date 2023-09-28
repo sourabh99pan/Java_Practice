@@ -6,26 +6,31 @@ import java.util.*;
 public class TestClass2 {
 
 	public static void main(String[] args) {
-		int arr[] = {21,34,22,65,43,22,65,25,89};
+
+		String str = "Hello";
 		
-		int s = 4;
-		int sum=0;
-		int sumall=0;
-		int n=0;
-		for(int i=0;i<=arr.length-s;i++)
-		{
-			for(int j=i;n<s;j++)
-			{
-				sum=sum+arr[j];
-				sumall=Math.max(sumall, sum);
-				n++;
+		System.out.println(str.hashCode());
+		
+		String str1 = "Hello";
+		
+		System.out.println(str1.hashCode());
+		
+		str = str.concat("World");
+		
+		System.out.println(str.hashCode());
+		
+		StringBuffer b = new StringBuffer();
+		
+		b.append("abc");
+		
+		System.out.println(b.hashCode());
+		
+		b.append("xyz");
+		
+		System.out.println(b.hashCode());
+		
 				
-			}
-			sumall=Math.max(sumall, sum);
-			sum=0;
-			n=0;
-		}
+
 		
-		System.out.println("Largest sum of subarray length 3 is: "+sumall);
 	}
 }
